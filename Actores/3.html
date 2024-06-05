@@ -1,0 +1,170 @@
+<style>
+.contenedor-rectangulos {
+    display: flex;
+}
+
+.contenedor-vertical {
+    display: flex;
+    flex-direction: column; /* Acomoda los elementos de arriba hacia abajo */
+}
+
+.rectangulo {
+    width: 175px;
+    height: 100px;
+    background-color: lightblue;
+    margin-right: 10px; /* Espacio entre rectángulos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rectanguloFrecuencia {
+    width: 140px;
+    height: 50px;
+    background-color: lightblue;
+    margin-right: 10px; /* Espacio entre rectángulos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rectanguloFlechaLateral {
+    width: 140px;
+    height: 50px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.flecha-vertical {
+    width: 0;
+    height: 200px;
+    border-left: 2px solid black; /* Grosor y color de la línea de la flecha */
+    position: relative;
+}
+
+.flecha-vertical::before {
+    transform: rotate(180deg);
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -5px; /* Posición lateral de la punta de la flecha */
+    border-top: 10px solid black; /* Tamaño y color de la punta de la flecha */
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.flecha-vertical::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: -5px; /* Posición lateral de la segunda punta de la flecha */
+    border-bottom: 10px solid black; /* Tamaño y color de la segunda punta de la flecha */
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    transform: rotate(180deg); /* Rotación de 180 grados */
+}
+
+@media (max-width: 576px) {
+    .menor-mayor{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 525px) {
+    .contenedor-rectangulos {
+        flex-direction: column; /* Cambia a disposición vertical */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .frecuencia{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .rectanguloFrecuencia{
+        margin-bottom: 10px;
+    }
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="h1 roboto-medium titulo mt-3" style="color: #55679e">Personas que exigen justicia (Periódico 3)</h1>
+            <p class="roboto-light text-center mt-3 parrafo" style="color:#959595">
+                El realizar el análisis se identificó quienes son las personas que
+                exigen justicia y que parentesco tienen con la víctima, detectando
+                6 clasificaciones diferentes en relación a esto.
+            </p>
+            <h2 class="h2 mb-2 roboto-medium subtitulo">
+                ¿Qúe parentesco y con qué frecuencia exigen justicia?
+            </h2>
+        </div>
+        
+        <div class="row">
+            <div class="col-12 col-sm-6 d-flex justify-content-center mb-5 mt-3">
+                <div class="contenedor-vertical mb-3">
+                    <div class="rectangulo" style="border: solid 1px black; background-color: #56c2d8;">
+                        <p class="parrafo-elemento roboto-medium">Colectivos</p>
+                    </div>
+                    <div class="rectangulo" style="border: solid 1px black; background-color: #73cbde;">
+                        <p class="parrafo-elemento roboto-medium">Padres</p>
+                    </div>
+                    <div class="rectangulo" style="border: solid 1px black; background-color: #9fd6e4;">
+                        <p class="parrafo-elemento roboto-medium">Autoridades</p>
+                    </div>
+                    <div class="rectangulo" style="border: solid 1px black; background-color: #aed9e0;">
+                        <p class="parrafo-elemento roboto-medium">Ella misma</p>
+                    </div>
+                    <div class="rectangulo" style="border: solid 1px black; background-color: #d2d7da;">
+                        <p class="parrafo-elemento roboto-medium">No se menciona</p>
+                    </div>
+                    <div class="rectangulo" style="border: solid 1px black; background-color: #d8d8d8;">
+                        <p class="parrafo-elemento roboto-medium">Sin parentesco</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 d-flex align-items-center menor-mayor mb-5">
+                <div style="display: flex;">
+                    <div class="flecha-vertical"></div>
+                    <div class="ms-5">
+                        <div class="rectanguloFlechaLateral" style="background-color: #54c3d9; color: white;">
+                            <p class=" parrafo-elemento roboto-medium"><strong>Mayor número</strong></p>
+                        </div>
+                        <div class="rectanguloFlechaLateral mt-3" style="background-color: #cae7f1;">
+                            <p class=" parrafo-elemento roboto-medium"><strong>Menor número</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-start frecuencia">
+                <div class="contenedor-rectangulos mt-3">
+                    <div class="rectanguloFrecuencia" style="background-color: #5bc0da;">
+                        <p class=" parrafo-elemento roboto-medium"><strong>Frecuentemente</strong></p>
+                    </div>
+                    <div class="rectanguloFrecuencia" style="background-color: #a5d9e4;">
+                        <p class=" parrafo-elemento roboto-medium"><strong>Regularmente</strong></p>
+                    </div>
+                    <div class="rectanguloFrecuencia" style="background-color: #c8e6ee;">
+                        <p class=" parrafo-elemento roboto-medium"><strong>Muy poco</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2 class="h2 mt-3 mb-4 roboto-bold subtitulo">
+                Interpretación en relación a las 174 notas de un año (2022).
+            </h2>
+        </div>
+    </div>
+</body>

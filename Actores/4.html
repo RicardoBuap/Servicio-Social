@@ -1,0 +1,126 @@
+<body>
+    <style>
+    .circles-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* gap: 10px Espacio entre círculos y líneas */
+    }
+
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+
+    .line {
+        width: 2px;
+        height: 20px; /* Ajusta el tamaño de las líneas */
+        background-color: #000;
+    }
+
+    .circle {
+        color:white;
+        position: relative; /* Permite posicionar el texto con respecto al círculo */
+    }
+
+    .circle::after {
+        color: #000;
+        content: ""; /* Texto que se insertará al lado del círculo */
+        position: absolute; /* Posiciona el texto con respecto al círculo */
+        left: 45px; /* Ajusta la distancia del texto al círculo */
+        white-space: nowrap;
+    }
+
+    .uno::after{
+    content: "Convocar a una marcha.";
+    }
+
+    .dos::after{
+    content: "Carpeta de investigación.";
+    }
+
+    .tres::after{
+    content: "Individualmente.";
+    }
+
+    .cuatro::after{
+    content: "Manifestaciones pacíficas.";
+    }
+
+    .cinco::after, .seis::after, .siete::after{
+    content: "Colectivamente.";
+    }
+
+    .ocho::after, .nueve::after, .once::after{
+    content: "No se menciona.";
+    }
+
+    .diez::after{
+    content: "Denuncia y exigir justicia.";
+    }
+
+    .doce::after{
+    content: "Se exige que se investigue.";
+    }
+
+    @media (max-width: 550px) {
+        .circulos{
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        margin-left: 10px;
+        }
+    }
+    </style>
+    <div class="container">
+        <div class="row">
+            <h1 class="h1 mt-3 roboto-medium titulo" style="color: #8fa5cf;">Maneras de pedir justicia (Periódico 1)</h1>
+            <p class="roboto-light-italic parrafo" style="color: #959595;">
+                El análisis ayuda a identificar cuál es la forma en que se exige justicia por parte de las personas
+                involucradas en los casos de violencia, por lo cual en la siguiente visualización se muestra la manera en que se
+                pide justicia.
+            </p>
+            <h2 class="h2 text-center roboto-bold parrafo">
+                <strong>Manera en que se denuncia/ se pide justicia</strong>
+            </h2>
+            <p class="text-center roboto-light parrafo">
+                Información recabada por mes, entorno a la nota de mayor exigencia.
+            </p>
+        </div>
+        <div class="col-12 circulos">
+            <div class="circles-container">
+                <div class="line"></div>
+                <div class="circle uno roboto-regular parrafo-elemento" style="background-color: #1c78a8;">1</div>
+                <div class="line"></div>
+                <div class="circle dos roboto-regular parrafo-elemento" style="background-color: #63a7c8">2</div>
+                <div class="line"></div>
+                <div class="circle tres roboto-regular parrafo-elemento" style="background-color: #1c78a8">3</div>
+                <div class="line"></div>
+                <div class="circle cuatro roboto-regular parrafo-elemento" style="background-color: #63a7c8">4</div>
+                <div class="line"></div>
+                <div class="circle cinco roboto-regular parrafo-elemento" style="background-color: #1c78a8">5</div>
+                <div class="line"></div>
+                <div class="circle seis roboto-regular parrafo-elemento" style="background-color: #63a7c8">6</div>
+                <div class="line"></div>
+                <div class="circle siete roboto-regular parrafo-elemento" style="background-color: #1c78a8">7</div>
+                <div class="line"></div>
+                <div class="circle ocho roboto-regular parrafo-elemento" style="background-color: #63a7c8">8</div>
+                <div class="line"></div>
+                <div class="circle nueve roboto-regular parrafo-elemento" style="background-color: #1c78a8">9</div>
+                <div class="line"></div>
+                <div class="circle diez roboto-regular parrafo-elemento" style="background-color: #63a7c8">10</div>
+                <div class="line"></div>
+                <div class="circle once roboto-regular parrafo-elemento" style="background-color: #1c78a8">11</div>
+                <div class="line"></div>
+                <div class="circle doce roboto-regular parrafo-elemento" style="background-color: #63a7c8">12</div>
+                <div class="line mb-5"></div>
+            </div>
+        </div> 
+    </div>
+</body>

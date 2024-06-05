@@ -1,0 +1,193 @@
+<style>
+.contenedor-rectangulos {
+    display: flex;
+}
+
+.contenedor-vertical {
+    display: flex;
+    flex-direction: column; /* Acomoda los elementos de arriba hacia abajo */
+}
+
+.rectangulo {
+    width: 175px;
+    height: 100px;
+    background-color: lightblue;
+    margin-right: 10px; /* Espacio entre rectángulos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rectanguloFrecuencia {
+    width: 140px;
+    height: 50px;
+    background-color: lightblue;
+    margin-right: 10px; /* Espacio entre rectángulos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flecha-vertical {
+    width: 0;
+    height: 300px;
+    border-left: 2px solid black; /* Grosor y color de la línea de la flecha */
+    position: relative;
+    margin-right: 5rem;
+}
+
+.flecha-vertical::before {
+    transform: rotate(180deg);
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -5px; /* Posición lateral de la punta de la flecha */
+    border-top: 10px solid black; /* Tamaño y color de la punta de la flecha */
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.flecha-vertical::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: -5px; /* Posición lateral de la segunda punta de la flecha */
+    border-bottom: 10px solid black; /* Tamaño y color de la segunda punta de la flecha */
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    transform: rotate(180deg); /* Rotación de 180 grados */
+}
+
+@media (max-width: 500px) {
+    .contenedor-rectangulos {
+        flex-direction: column; /* Cambia a disposición vertical */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .frecuencia{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .rectanguloFrecuencia{
+        margin-bottom: 10px;
+    }
+}
+
+.rectangulo-lateral {
+    width: 300px;
+    height: 300px;
+    background-color: lightgreen; /* Color del rectángulo lateral */
+    border: 1px solid black;
+}
+
+.grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Se crean 6 columnas */
+        grid-template-rows: repeat(6, 1fr); /* Se crean 2 filas */
+        gap: 0px; /* Espacio entre elementos del grid */
+        height: 100%; /* Altura del grid */
+        padding: 0px; /* Espaciado interno del grid */
+    }
+
+    /* Estilo para los elementos dentro del grid */
+    .grid-item {
+        /* background-color: lightcoral; Color del contenido del grid */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px;
+        color: #1b78a8;
+    }
+
+    .degradado {
+        width: 300px;
+        height: 300px;
+        background-image: linear-gradient(to bottom, #83b6d1, #ffffff);
+    }
+
+    @media(max-width: 400px) {
+        .flecha-vertical{
+            height: 150px;
+        }
+
+        .rectangulo-lateral{
+            width: 270px;
+            height: 300px;
+        }
+    }
+
+    @media(max-width: 450px){
+        .rectangulo-lateral{margin-left: 0px!important;}
+
+        .flecha-vertical{
+            margin-right: 1.5rem;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="mt-3 mb-3 roboto-medium titulo" style="color: #8fa5cf;">Palabras para referirse al violentador (Periódico 1)</h1>
+            <p class="parrafo roboto-light-italic">
+                Al realizar el análisis de cada una de las notas periodísticas fue posible el identificar cuáles son las
+                palabras que habitualmente son más utilizadas para referirse al violentador y en su mayoría la más utilizada
+                es sujeto.
+            </p>
+            <h2 class="roboto-medium subtitulo text-center mb-5 mt-3">
+                Agresor o palabra que se utiliza para referirse al violentador.
+            </h2>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-4 col-12 d-flex justify-content-center my-3">
+                <div class="flecha-vertical"></div>
+            </div>
+            <div class="col-sm-8 col-12 d-flex justify-content-center mt-3">
+                <div class="ms-3 rectangulo-lateral degradado">
+                    <div class="grid-container">
+                        <!-- Contenido del grid -->
+                        <div class="grid-item roboto-bold parrafo-elemento"><h2 class="h2" style="color:#1879a7; font-size: 45px;"><strong>Sujeto</strong></h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento justify-content-end align-items-start"><h2 class="h2" style="color:#1879a7; font-size: 20px;"><strong>Agresor</strong></h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento"><h2 class="h2" style="color:#1879a7; font-size: 30px;"><strong>Sospechoso</strong></h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento justify-content-end align-items-start"><h2 class="h2" style="color:#1879a7; font-size: 20px;">Feminicida</h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento"><h2 class="h2" style="color:#1879a7; font-size: 20px;"><strong>Acosador</strong></h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento justify-content-end align-items-start"><h2 class="h2" style="color:#1879a7; font-size: 20px;"><strong>Hombre</strong></h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento justify-content-start align-items-start"><h2 class="h2" style="color:#1879a7; font-size: 20px;"><strong>Asesinos</strong></h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento justify-content-start align-items-start"><h2 class="h2" style="color:#1879a7; font-size: 20px;"><strong>Presunto</strong></h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento justify-content-start align-items-start"><h2 class="h2" style="color:#1879a7; font-size: 20px;"><strong>Responsable</strong></h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento justify-content-end align-items-end"><h2 class="h2" style="color:#1879a7; font-size: 20px;"><strong>Victimarios</strong></h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento"><h2 class="h2" style="color:#1879a7; font-size: 20px;"><strong>Delincuente</strong></h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento justify-content-end align-items-end"><h2 class="h2" style="color:#1879a7; font-size: 20px;"><strong>Madrastra</strong></h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento justify-content-start align-items-start"><h2 class="h2" style="color:#1879a7; font-size: 15px;"><strong>Conductor</strong></h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento justify-content-end align-items-end"><h2 class="h2" style="color:#1879a7; font-size: 20px;"><strong>Acusados</strong></h2></div>
+                        <div class="grid-item roboto-bold parrafo-elemento justify-content-end align-items-end"><h2 class="h2" style="color:#1879a7; font-size: 15px;"><strong>Homicidas</strong></h2></div>
+                    </div>
+                </div> <!-- Rectángulo lateral -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center frecuencia">
+                <div class="contenedor-rectangulos mb-5 mt-5">
+                    <div class="rectanguloFrecuencia" style="background-color: #1879a7;">
+                        <p class="roboto-medium parrafo-elemento"><strong>Frecuentemente</strong></p>
+                    </div>
+                    <div class="rectanguloFrecuencia" style="background-color: #6aa6c7;">
+                        <p class="roboto-medium parrafo-elemento"><strong>Regularmente</strong></p>
+                    </div>
+                    <div class="rectanguloFrecuencia" style="background-color: #bde1eb;">
+                        <p class="roboto-medium parrafo-elemento"><strong>Muy poco</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2 class="subtitulo roboto-bold mt-2 mb-5">
+                15 palabras que más se usan, en relación a las 174 notas de un año 2022.
+            </h2>
+        </div>
+    </div>
+</body>

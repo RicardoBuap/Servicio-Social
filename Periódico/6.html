@@ -1,0 +1,104 @@
+<style>
+    .caja{
+        width: 130px;
+        height: 260px;
+        border: 1px solid black;
+        border-radius: 40px;
+        display: flex; /* Convertimos caja en un contenedor flex */
+        flex-direction: column; /* Organizamos los elementos en una columna vertical */
+        align-items: center; /* Centramos los elementos horizontalmente */
+        justify-content: center; /* Opcionalmente centramos los elementos verticalmente */
+    }
+
+    .pildora{
+        padding: 0 !important;
+        width: 60px;
+        height: 180px;
+        border: 1px solid black;
+        border-radius: 25px;
+        display: flex; /*Convertimos pildora en un contenedor flex */
+        flex-direction: column;/* Organizamos los elementos en una columna vertical */
+        margin-top: 5px;
+    }
+
+    .division{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pildora2{
+        width: 40px;
+        height: 722px;
+        border: 1px solid black; /* Opcional, para visualizar el contenedor */
+        border-radius: 25px;
+    }
+
+    .division2 {
+        width: 100%;
+        height: 60px; /* 20% de la altura del rectángulo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .meses{
+        height: 770px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="titulo text-center mt-3 roboto-bold"><b class="fw-bold">Notas periodísticas</b></h1>
+            <p class="parrafo roboto-light text-center">Durante el año 2022</p>
+            <h2 class="titulo text-center roboto-bold"><b class="fw-bold">Periódico 3</b></h2>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 col-sm-6 d-flex justify-content-center">
+                <div class="caja">
+                    <div class="roboto-medium parrafo-elemento" style="font-size: 20px;">Simbología</div>
+                    <div class="pildora">
+                        <div class="division roboto-medium parrafo-elemento" style="border-top-right-radius: 24px; border-top-left-radius: 24px; border-bottom: 1px solid black; background-color: #c9e6ef;">Menor</div>
+                        <div class="division" style="background-color: #a4d8e6;border-bottom: 1px solid black;"></div>
+                        <div class="division roboto-medium parrafo-elemento" style="border-bottom-left-radius:24px;border-bottom-right-radius: 24px;background-color: #59c1da;">Mayor</div>
+                    </div>
+            </div>
+            </div>
+            <div class="col-12 col-sm-6 m-0 p-0 d-flex justify-content-center align-items-center flex-column my-4">
+                <div class="ambos d-flex my-0 py-0">
+                    <div class="meses">
+                        <div class="division2 roboto-medium parrafo-elemento align-items-center justify-content-center" style="padding-right: 15px;">Enero</div>
+                        <div class="division2 roboto-medium parrafo-elemento align-items-center justify-content-center" style="padding-right: 15px;">Febrero</div>
+                        <div class="division2 roboto-medium parrafo-elemento align-items-center justify-content-center" style="padding-right: 15px;">Marzo</div>
+                        <div class="division2 roboto-medium parrafo-elemento align-items-center justify-content-center" style="padding-right: 15px;">Abril</div>
+                        <div class="division2 roboto-medium parrafo-elemento align-items-center justify-content-center" style="padding-right: 15px;">Mayo</div>
+                        <div class="division2 roboto-medium parrafo-elemento align-items-center justify-content-center" style="padding-right: 15px;">Junio</div>
+                        <div class="division2 roboto-medium parrafo-elemento align-items-center justify-content-center" style="padding-right: 15px;">Julio</div>
+                        <div class="division2 roboto-medium parrafo-elemento align-items-center justify-content-center" style="padding-right: 15px;">Agosto</div>
+                        <div class="division2 roboto-medium parrafo-elemento align-items-center justify-content-center" style="padding-right: 15px;">Septiembre</div>
+                        <div class="division2 roboto-medium parrafo-elemento align-items-center justify-content-center" style="padding-right: 15px;">Octubre</div>
+                        <div class="division2 roboto-medium parrafo-elemento align-items-center justify-content-center" style="padding-right: 15px;">Noviembre</div>
+                        <div class="division2 roboto-medium parrafo-elemento align-items-center justify-content-center" style="padding-right: 15px;">Diciembre</div>
+                    </div>
+                    <div class="pildora2">
+                        <div class="division2 roboto-medium parrafo-elemento" style="border-top-right-radius: 25px; border-top-left-radius: 25px; border-bottom: 1px solid black; background-color: #a4d8e6;">10</div>
+                        <div class="division2 roboto-medium parrafo-elemento" style="border-bottom: 1px solid black; background-color: #a4d8e6;">6</div>
+                        <div class="division2 roboto-medium parrafo-elemento" style="border-bottom: 1px solid black; background-color: #a4d8e6;">9</div>
+                        <div class="division2 roboto-medium parrafo-elemento" style="border-bottom: 1px solid black; background-color: #59c1da;">11</div>
+                        <div class="division2 roboto-medium parrafo-elemento" style="border-bottom: 1px solid black; background-color: #59c1da;">16</div>
+                        <div class="division2 roboto-medium parrafo-elemento" style="border-bottom: 1px solid black; background-color: #a4d8e6;">10</div>
+                        <div class="division2 roboto-medium parrafo-elemento" style="border-bottom: 1px solid black; background-color: #a4d8e6;">7</div>
+                        <div class="division2 roboto-medium parrafo-elemento" style="border-bottom: 1px solid black; background-color: #c9e6ef;">4</div>
+                        <div class="division2 roboto-medium parrafo-elemento" style="border-bottom: 1px solid black; background-color: #c9e6ef;">2</div>
+                        <div class="division2 roboto-medium parrafo-elemento" style="border-bottom: 1px solid black; background-color: #c9e6ef;">1</div>
+                        <div class="division2 roboto-medium parrafo-elemento" style="border-bottom: 1px solid black; background-color: #59c1da;">11</div>
+                        <div class="division2 roboto-medium parrafo-elemento" style="border-bottom-left-radius:25px;border-bottom-right-radius: 25px; background-color: #c9e6ef;">1</div>
+                    </div>
+                </div>
+                <p class="roboto-light parrafo-elemento mb-5">Total de notas: 88</p>
+            </div>
+        </div>
+    </div>
+</body>

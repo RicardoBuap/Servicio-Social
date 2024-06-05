@@ -1,0 +1,173 @@
+<style>
+    .texto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (min-width: 320px) and (max-width: 699px) {
+        .tabla{
+            width: 80%;
+        }
+
+        .table-responsive{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media (min-width: 700px) and (max-width: 950px) {
+        .tabla{
+            width: 80%;
+        }
+
+        .table-responsive{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media (min-width: 951px) {
+        .tabla{
+            width: 60%;
+        }
+
+        .table-responsive{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .principal{font-size: 2.25rem;}
+
+        .lead {font-size: 1.5rem;}
+    }
+
+    @media screen and (min-width: 320px) and (max-width:599px) {
+        .principal{font-size: 2.5rem;}
+
+        .lead {font-size: 1.5rem;}
+    }
+
+    @media screen and (min-width: 600px) and (max-width:800px) {
+        .principal{font-size: 2.75rem;}
+
+        .lead {font-size: 2rem;}
+    }
+
+    @media screen and (min-width: 800px) and (max-width:1024px) {
+        .principal{font-size: 3rem;}
+
+        .lead {font-size: 2.25rem;}
+    }
+
+    @media screen and (min-width: 1024px) {
+        .principal{font-size: 3.25rem;}
+
+        .lead {font-size: 2.75rem;}
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="texto mt-3">
+                <h1 class="h1 principal mt-4">Periódico 1</h1>
+                <p class="lead">Tipología ONU</p>
+                <p class="roboto-light-italic lead">
+                    Después de realizar el análisis se identificaron diferentes tipos de agresión
+                    que sufrían las víctimas en el año 2022.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table table-bordered text-center mb-4 table-hover border-1 tabla" style="border-color: black;">
+                    <thead>
+                        <tr>
+                            <th class="text-center lead" colspan="2" style="background-color: #187aa7; color: white;">Periódico 1</th>
+                        </tr>
+                        <tr>
+                            <th>Tipología ONU</th>
+                            <th>Número de víctimas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-color: black;">
+                            <td class="table-primary" style="border-color: black;">Económica</td>
+                            <td class="table-primary" style="border-color: black;">22 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td>Psicológico</td>
+                            <td>51 mujeress</td>
+                        </tr>
+                        <tr>
+                            <td class="table-primary" style="border-color: black;">Emocional</td>
+                            <td class="table-primary" style="border-color: black;">42 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td>Física</td>
+                            <td>196 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td class="table-primary" style="border-color: black;">Sexual</td>
+                            <td class="table-primary" style="border-color: black;">80 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td>Feminicidio</td>
+                            <td>221 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td class="table-primary" style="border-color: black;">Asesinato</td>
+                            <td class="table-primary" style="border-color: black;">14 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td>Acoso sexual</td>
+                            <td>35 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td class="table-primary" style="border-color: black;">Violación</td>
+                            <td class="table-primary" style="border-color: black;">78 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td>Violación correctiva</td>
+                            <td>3 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td class="table-primary" style="border-color: black;">Cultura de violación</td>
+                            <td class="table-primary" style="border-color: black;">5 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td>Trata de personas</td>
+                            <td>7 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td class="table-primary" style="border-color: black;">Ciberacoso</td>
+                            <td class="table-primary" style="border-color: black;">11 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td>Sexting</td>
+                            <td>9 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td class="table-primary" style="border-color: black;">Doxing</td>
+                            <td class="table-primary" style="border-color: black;">5 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td>Otros</td>
+                            <td>39 mujeres</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="background-color: #187aa7; color: #187aa7;">Easter egg</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>

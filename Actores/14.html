@@ -1,0 +1,136 @@
+<style>
+    .caja{
+        width: 150px;
+        height: 250px;
+        border: 1.5px solid black;
+        border-radius: 10px;
+        display: flex; /* Convertimos caja en un contenedor flex */
+        flex-direction: column; /* Organizamos los elementos en una columna vertical */
+        align-items: center; /* Centramos los elementos horizontalmente */
+        justify-content: center; /* Opcionalmente centramos los elementos verticalmente */
+    }
+
+    .pildora{
+        padding: 0 !important;
+        width: 60px;
+        height: 160px;
+        border: 1px solid black;
+        border-radius: 25px;
+        display: flex; /* Convertimos pildora en un contenedor flex */
+        flex-direction: column; /* Organizamos los elementos en una columna vertical */
+        margin-top: 5px;
+    }
+
+    .division{
+        width: 100%;
+        height: 33.33%; /* Cada división ocupa un tercio de la altura */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pildora2{
+            width: 40px;
+            height: 350px;
+            border: 1px solid black; /* Opcional, para visualizar el contenedor */
+            border-radius: 25px;
+        }
+
+    .division2 {
+        width: 100%; /* 100% del ancho del rectángulo */
+        height: 20%; /* 20% de la altura del rectángulo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-persona{
+        display: flex;
+    }
+
+    .persona{
+        display: block;
+    }
+
+    .texto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media (max-width: 429px) {
+        .row > div {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 520px) and (min-width: 430px) {
+        .row > .col-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .row > .col-4:last-child {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    @media(min-width: 1000px) {
+        .alta{
+            font-size: 1.50rem;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="titulo text-center roboto-bold mt-3">Periódico 2</h1>
+            <h3 class="subtitulo roboto-medium text-center">Edad de las víctimas agredidas por año.</h3>
+            <p class="parrafo roboto-light text-center mt-3 alta" style="color: #959595">
+                Después de realizar el análisis se identificó la edad de las víctimas
+                y cuántas hubo en el año 2022, se observa que hay un mayor número de mujeres
+                agredidas de entre los 27 a 59 años.
+            </p>
+        </div>
+        <div class="row mb-3">
+            <div class="col-4 m-0 p-0 d-flex justify-content-center align-items-center mb-5">
+                <div class="caja">
+                    <p class="roboto-bold parrafo-elemento"><b>Simbología</b></p>
+                    <div class="pildora">
+                        <div class="division roboto-medium" style="border-top-right-radius: 25px; border-top-left-radius: 25px; border-bottom: 1px solid black; background-color: #f0bebf">Menor</div>
+                        <div class="division" style="background-color: #dc5e5f"></div>
+                        <div class="division roboto-medium" style="border-bottom-left-radius:25px;border-bottom-right-radius: 25px; border-top: 1px solid black; background-color: #d12e29">Mayor</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 m-0 p-0 d-flex justify-content-center align-items-center">
+                <div class="pildora2">
+                    <div class="division2 parrafo-elemento roboto-regular" style="border-top-right-radius: 25px; border-top-left-radius: 25px; border-bottom: 1px solid black; background-color: #f0bebf">6</div>
+                    <div class="division2 parrafo-elemento roboto-regular" style="border-bottom: 1px solid black; background-color: #d02d28">61</div>
+                    <div class="division2 parrafo-elemento roboto-regular" style="border-bottom: 1px solid black; background-color: #d02d28">85</div>
+                    <div class="division2 parrafo-elemento roboto-regular" style="border-bottom: 1px solid black; background-color: #da5e5e">28</div>
+                    <div class="division2 parrafo-elemento roboto-regular" style="border-bottom-left-radius:25px;border-bottom-right-radius: 25px; background-color: #f2bcbf">11</div>
+                </div>
+            </div>
+            <div class="col-4 mb-5 p-0 d-flex justify-content-center align-items-center">
+                <div class="contenedor-persona mb-5">
+                    <div class="persona text-center">
+                        <i class="bi bi-person-standing-dress persona" style="font-size: 60px;"></i>
+                        <i class="bi bi-person-standing-dress persona" style="font-size: 50px;"></i>
+                        <i class="bi bi-person-standing-dress persona" style="font-size: 40px;"></i>
+                        <i class="bi bi-person-standing-dress persona" style="font-size: 30px;"></i>
+                        <i class="bi bi-person-standing-dress persona" style="font-size: 25px;"></i>
+                    </div>
+                    <div class="texto">
+                        <p class="parrafo-elemento roboto-regular" style="display: flex; align-items: center;height: 92px; margin: 0px;">60 años y más</p>
+                        <p class="parrafo-elemento roboto-regular" style="display: flex; align-items: center;height: 77px; margin: 0px;">Desconocido</p>
+                        <p class="parrafo-elemento roboto-regular" style="display: flex; align-items: center;height: 62px; margin: 0px;">27 - 59 años</p>
+                        <p class="parrafo-elemento roboto-regular" style="display: flex; align-items: center;height: 47px; margin: 0px;">12 - 18 años</p>
+                        <p class="parrafo-elemento roboto-regular" style="display: flex; align-items: center;height: 32px; margin: 0px;">6 - 11 años</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

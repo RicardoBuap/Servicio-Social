@@ -1,0 +1,160 @@
+<style>
+    .rectangulo{
+        color: white;
+        padding: 5px 10px;
+    }
+
+    .contenedor-rectangulos{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+
+    .primer-rectangulo{
+        width: 320px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+    }
+
+    .segundo-rectangulo{
+        background-color: white;
+        width: 320px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+    }
+
+    .rectangulo-marco{
+        width: 300px;
+        height: 380px;
+        border: 2px solid black;
+        color: #ffffff;
+    }
+
+    .rectangulo-marco-chico{
+        width: 300px;
+        height: 70px;
+        display: flex;
+    }
+
+    .rectangulo-marco-chico-1{
+        width: 210px;
+        height: 70px;
+        background-color: #005f99;
+    }
+
+    .rectangulo-marco-chico-2{
+        width: 90px;
+        height: 70px;
+        background-color: #1c7bab;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+    }
+
+    .rectangulo-marco-grande{
+        width: 300px;
+        height: 230px;
+        display: flex;
+    }
+
+    .rectangulo-marco-grande-1{
+        width: 210px;
+        height: 306px;
+        background-color: #6ca9c6;
+        border-top: 2px solid black;
+    }
+
+    .rectangulo-marco-grande-2{
+        width: 90px;
+        height: 306px;
+        background-color: white;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-top: 2px solid black;
+    }
+
+    @media(max-width: 470px) {
+        .contenedor-rectangulos{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .rectangulo{
+            margin-bottom: 20px;
+            width: 50%;
+        }
+
+        .formato{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media(max-width: 700px) {
+        .rectangulo-doble {
+            flex-direction: column;
+            align-items: center;
+            border:0;
+        }
+
+    .primer-rectangulo, .segundo-rectangulo {
+        width: 320px; /* Puedes ajustar este valor según necesites */
+        margin-bottom: 20px; /* Añade un margen inferior para separar los rectángulos cuando se apilen */
+    }
+}
+</style>
+<body>
+    <div class="container-fluid my-4">
+        <div class="row">
+            <h1 class="titulo roboto-bold mt-4 px-5" style="color: 4c66b5;">Formato de la nota(Periódico 1)</h1>
+            <p class="parrafo roboto-light px-5">
+                Los tres formatos más recurrentes para presentar las 594 notas periodísticas
+                sobre casos de violencia contra la mujer durante el año 2022 fueron:
+            </p>
+        </div>
+        <div class="row">
+            <p class="roboto-regular subtitulo px-5"><b>Tipo de formato:</b></p>
+            <div class="contenedor-rectangulos d-flex justify-content-around">
+                <div class="rectangulo d-flex align-items-center justify-content-center" style="background-color:#1c7bab;">
+                    <p class="roboto-medium parrafo-elemento"><b class="b">1/4 Horizontal</b></p>
+                </div>
+                <div class="rectangulo d-flex align-items-center justify-content-center" style="background-color:#6ca9c6;">
+                    <p class="roboto-medium parrafo-elemento"><b class="b">3/4 Vertical</b></p>
+                </div>
+                <div class="rectangulo d-flex align-items-center justify-content-center" style="background-color:#bbdeea;">
+                    <p class="roboto-medium parrafo-elemento"><b class="b">Página completa</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="rectangulo-doble d-flex justify-content-center mb-5">
+                <div class="primer-rectangulo">
+                    <div class="rectangulo-marco">
+                        <div class="rectangulo-marco-chico">
+                            <div class="rectangulo-marco-chico-1 d-flex align-items-center justify-content-end">
+                                <p class="roboto-medium parrafo-elemento"><b class="roboto-bold">Total:</b>127 Formatos</p>
+                            </div>
+                            <div class="rectangulo-marco-chico-2"></div>
+                        </div>
+                        <div class="rectangulo-marco-grande">
+                            <div class="rectangulo-marco-grande-1 d-flex align-items-center justify-content-end">
+                                <p class="roboto-medium parrafo-elemento"><b class="roboto-bold">Total:</b>74 Formatos</p>
+                            </div>
+                            <div class="rectangulo-marco-grande-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="segundo-rectangulo">
+                    <div class="rectangulo-marco d-flex justify-content-center align-items-center" style="background-color: #bbdeea;">
+                        <p class="roboto-medium parrafo-elemento"><b class="roboto-bold">Total:</b> 71 Formatos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

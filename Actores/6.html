@@ -1,0 +1,143 @@
+<body>
+    <style>
+    .circles-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* gap: 10px Espacio entre círculos y líneas */
+    }
+
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+
+    .line {
+        width: 2px;
+        height: 20px; /* Ajusta el tamaño de las líneas */
+        background-color: #000;
+    }
+
+    .circle {
+        color:white;
+        position: relative; /* Permite posicionar el texto con respecto al círculo */
+    }
+
+    .circle::after {
+        color: #000;
+        content: ""; /* Texto que se insertará al lado del círculo */
+        position: absolute; /* Posiciona el texto con respecto al círculo */
+        left: 45px; /* Ajusta la distancia del texto al círculo */
+        white-space: nowrap;
+    }
+
+    .uno::after{
+    content: "Reformar leyes y reglamentos locales.";
+    }
+
+    .dos::after{
+    content: "Manifestación colectiva.";
+    }
+
+    .tres::after{
+    content: "Colectivamente.";
+    }
+
+    .cuatro::after{
+    content: "Personas externan inseguridad de ser nuevamente agredidas.";
+    }
+
+    .cinco::after, .seis::after{
+    content: "Colectivamente.";
+    }
+
+    .siete::after, .ocho::after, .nueve::after{
+    content: "No se menciona.";
+    }
+
+    .diez::after{
+    content: "Protesta frente a la Casa de Justicia de Puebla.";
+    }
+
+    .once::after{
+        content: "No se menciona.";
+    }
+
+    .doce::after{
+    content: "Solicitud de información para alentar su resolución.";
+    }
+
+    @media (max-width: 1100px) {
+        .circulos{
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        margin-left: 10px;
+        }
+    }
+
+    
+    @media (max-width: 420px){
+        .uno::after, .cuatro::after, .diez::after, .doce::after {
+            display: block;
+            min-width: 180px!important; /* Ajusta según sea necesario */
+            white-space: normal;
+            overflow-wrap: break-word;
+            /* top: 30px;
+            left: 0%; */
+        }
+    }
+
+    </style>
+    <div class="container">
+        <div class="row">
+            <h1 class="h1 mt-3 roboto-medium titulo" style="color: #8fa5cf;">Maneras de pedir justicia (Periódico 3)</h1>
+            <p class="roboto-light-italic parrafo" style="color: #959595;">
+                El análisis ayuda a identificar cuál es la forma en que se exige justicia por parte de las personas
+                involucradas en los casos de violencia, por lo cual en la siguiente visualización se muestra la manera en que se
+                pide justicia.
+            </p>
+            <h2 class="h2 text-center roboto-bold parrafo">
+                <strong>Manera en que se denuncia/ se pide justicia</strong>
+            </h2>
+            <p class="text-center roboto-light parrafo">
+                Información recabada por mes, entorno a la nota de mayor exigencia.
+            </p>
+        </div>
+        <div class="col-12 circulos">
+            <div class="circles-container">
+                <div class="line"></div>
+                <div class="circle uno roboto-regular parrafo-elemento" style="background-color: #65bbc9;">1</div>
+                <div class="line"></div>
+                <div class="circle dos roboto-regular parrafo-elemento" style="background-color: #a4dce1;">2</div>
+                <div class="line"></div>
+                <div class="circle tres roboto-regular parrafo-elemento" style="background-color:#65bbc9;">3</div>
+                <div class="line"></div>
+                <div class="circle cuatro roboto-regular parrafo-elemento" style="background-color: #a4dce1;">4</div>
+                <div class="line"></div>
+                <div class="circle cinco roboto-regular parrafo-elemento" style="background-color:#65bbc9;">5</div>
+                <div class="line"></div>
+                <div class="circle seis roboto-regular parrafo-elemento" style="background-color: #a4dce1;">6</div>
+                <div class="line"></div>
+                <div class="circle siete roboto-regular parrafo-elemento" style="background-color:#65bbc9;">7</div>
+                <div class="line"></div>
+                <div class="circle ocho roboto-regular parrafo-elemento" style="background-color: #a4dce1;">8</div>
+                <div class="line"></div>
+                <div class="circle nueve roboto-regular parrafo-elemento" style="background-color:#65bbc9;">9</div>
+                <div class="line"></div>
+                <div class="circle diez roboto-regular parrafo-elemento" style="background-color: #a4dce1;">10</div>
+                <div class="line"></div>
+                <div class="circle once roboto-regular parrafo-elemento" style="background-color:#65bbc9;">11</div>
+                <div class="line"></div>
+                <div class="circle doce roboto-regular parrafo-elemento" style="background-color: #a4dce1;">12</div>
+                <div class="line mb-5"></div>
+            </div>
+        </div> 
+    </div>
+</body>

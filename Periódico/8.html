@@ -1,0 +1,78 @@
+<style>
+    .circulo{
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+
+    .texto{
+        height: 30px;
+        width: auto;
+    }
+
+    .cuadro{
+        width: 240px;
+        height: auto;
+        border: 1px solid black;
+        border-radius: 30px;
+    }
+
+    @media (max-width: 550px) {
+    .cuadro{
+        width: 220px;
+    }
+
+    .zoomable {
+        margin-top: 20px;
+        margin: auto;
+        cursor: pointer;
+        transition: transform 0.5s ease; /* Ajuste para hacer la transición más suave y rápida */
+    }
+
+    .zoomable:hover {
+        transform: scale(1.5); /* Escala la imagen al 110% de su tamaño original al pasar el mouse */
+    }
+
+    .contenedor-imagen {
+        overflow: hidden; /* Esto previene que el contenido desbordado sea visible */
+        display: flex; /* Mantiene la alineación centrada si es necesario */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+    }
+}
+</style>
+<body>
+    <div class="container">
+        <div class="row m-auto">
+            <div class="col-12">
+                <h1 class="titulo roboto-bold text-center mt-3">Municipios dónde ocurrieron los sucesos</h1>
+                <p class="subtitulo roboto-light text-center">Durante el año 2022</p>
+                <p class="titulo roboto-bold text-center">Periódico 2</p>
+            </div>
+            <div class="col-12 d-flex flex-column align-items-center p-0 contenedor-imagen">
+                <div class="cuadro d-flex flex-column align-items-center">
+                    <p class="parrafo roboto-bold">Simbología</p>
+                    <div class="contenedor-ambos d-flex">
+                        <div class="contenedor-circulos">
+                            <div class="my-2 circulo" style="background-color: #d02d28;"></div>
+                            <div class="my-2 circulo" style="background-color: #e95555;"></div>
+                            <div class="my-2 circulo" style="background-color: #ef9698;"></div>
+                            <div class="my-2 circulo" style="background-color: #f7d0d3;"></div>
+                            <div class="my-2 circulo" style="background-color: #2b2b2b;"></div>
+                        </div>
+                        <div class="contenedor-texto">
+                            <div class="my-2 texto ps-2 parrafo-elemento roboto-regular">De 10 casos o más</div>
+                            <div class="my-2 texto ps-2 parrafo-elemento roboto-regular">De 5 a 9 casos</div>
+                            <div class="my-2 texto ps-2 parrafo-elemento roboto-regular">De 4 casos a 2 casos</div>
+                            <div class="my-2 texto ps-2 parrafo-elemento roboto-regular">Un caso</div>
+                            <div class="my-2 texto ps-2 parrafo-elemento roboto-regular">Número de casos</div>
+                        </div>
+                    </div>
+                </div>
+                <img src="../img/mapa2.jpg" alt="Mapa2" class="img-fluid mt-2 zoomable">
+            </div>
+            
+        </div>
+    </div>
+</body>
